@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motivation Station</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file for styling -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="overlay"></div> <!-- Overlay for welcoming animation -->
     <header>
         <div class="container">
             <h1>Motivation Station</h1>
@@ -44,5 +45,14 @@
     </footer>
 
     <script src="script.js"></script> <!-- Link to external JavaScript file for interactivity -->
+    <script>
+        // Welcoming animation
+        window.onload = function() {
+            document.querySelector('.overlay').classList.add('fade-out');
+            setTimeout(() => {
+                document.querySelector('.overlay').style.display = 'none';
+            }, 1000); // Hide the overlay after 1 second
+        }
+    </script>
 </body>
 </html>
