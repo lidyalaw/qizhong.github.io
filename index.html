@@ -1,66 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motivation Station</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file for styling -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="overlay"></div> <!-- Overlay for welcoming animation -->
-    <header>
-        <div class="container">
-            <h1>Motivation Station</h1>
-            <p>Your daily dose of inspiration</p>
-        </div>
-    </header>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sunnyside Agency Landing Page</title>
+  </head>
+  <body>
 
-    <main>
-        <div class="container">
-            <div id="quoteContainer">
-                <div class="quote" id="currentQuote">
-                    <blockquote>
-                        "Success is not final, failure is not fatal: It is the courage to continue that counts."
-                    </blockquote>
-                    <p>- Winston Churchill</p>
-                </div>
-            </div>
-            <button id="randomQuoteBtn">Get Random Quote</button>
-            <form id="quoteForm">
-                <label for="quoteText">Submit Your Own Quote:</label><br>
-                <textarea id="quoteText" name="quoteText" rows="4" cols="50" placeholder="Enter your quote"></textarea><br>
-                <label for="quoteAuthor">Author:</label>
-                <input type="text" id="quoteAuthor" name="quoteAuthor" placeholder="Author name"><br>
-                <input type="submit" value="Submit">
-            </form>
-            <div id="gameContainer">
-                <h2>Guess the Number!</h2>
-                <p>I'm thinking of a number between 1 and 100. Can you guess it?</p>
-                <input type="number" id="guessInput" placeholder="Enter your guess">
-                <button id="guessBtn">Guess</button>
-                <p id="result"></p>
-                <button id="resetBtn">Play Again</button>
-            </div>
-        </div>
-    </main>
+    <nav class="nav burger">
+      <a href="#">
+        <img src="./images/logo.svg">
+      </a>
+      <ul class="nav-list burger">
+        <li>
+          <a href="#about" class="nav-link burger">About</a>
+        </li>
+        <li>
+          <a href="#services" class="nav-link burger">Services</a>
+        </li>
+        <li>
+          <a href="#projects" class="nav-link burger">Projects</a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-link burger">
+            <button type="button">CONTACT</button>
+          </a>
+        </li>
+      </ul>
+      <div class="nav-hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    </nav>
 
-    <footer>
-        <div class="container">
-            <p>© 2024 Motivation Station. All rights reserved.</p>
-            <p>Designed by Your Name</p>
-        </div>
-    </footer>
+    <div class="home">
+      <h1 class="home-title">WE ARE CREATIVES</h1>
+      <a href="#about">
+        <img src="./images/icon-arrow-down.svg" class="home-arrow">
+      </a>
+    </div>
 
-    <script src="script.js"></script> <!-- Link to external JavaScript file for interactivity -->
-    <script>
-        // Welcoming animation
-        window.onload = function() {
-            document.querySelector('.overlay').classList.add('fade-out');
-            setTimeout(() => {
-                document.querySelector('.overlay').style.display = 'none';
-            }, 1000); // Hide the overlay after 1 second
-        }
-    </script>
-</body>
+    <div class="about" id="about">
+      <div class="about-section one">
+        <div class="about-item left">
+          <h1>Transform your brand</h1>
+          <p>
+            We are a full-service creative agency specializing in helping brands grow fast. 
+            Engage your clients through compelling visuals that do most of the marketing for you.
+          </p>
+          <a href="#services" class="yellow">LEARN MORE</a>
+        </div>
+        <div class="about-item egg"></div>
+      </div>
+      <div class="about-section two">
+        <div class="about-item glass"></div>
+        <div class="about-item right">
+          <h1>Stand out to the right audience</h1>
+          <p>
+            Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.
+          </p>
+          <a href="#services" class="pink">LEARN MORE</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="services" id="services">
+      <div class="services-section">
+        <div class="services-item cherry cyan">
+          <h1>Graphic design</h1>
+          <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+        </div>
+        <div class="services-item orange blue">
+          <h1>Photography</h1>
+          <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects" id="projects">
+      <div class="projects-container">
+        <h1 class="projects-title">CLIENT TESTIMONIALS</h1>
+        <div class="projects-reviews">
+          <div class="projects-review">
+            <img src="./images/image-emily.jpg">
+            <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+            <h1>Emily R.</h1>
+            <h2>Marketing Director</h2>
+          </div>
+          <div class="projects-review">
+            <img src="./images/image-thomas.jpg">
+            <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+            <h1>Thomas S.</h1>
+            <h2>Chief Operating Officer</h2>
+          </div>
+          <div class="projects-review">
+            <img src="./images/image-jennie.jpg">
+            <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+            <h1>Jennie F.</h1>
+            <h2>Business Owner</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div class="contact-images">
+        <div class="contact-image milk"></div>
+        <div class="contact-image bowl"></div>
+        <div class="contact-image cone"></div>
+        <div class="contact-image sugar"></div>
+      </div>
+      <div class="contact-links">
+        <a href="https://teamsunnyside.netlify.app/">
+          <img src="./images/logo.svg">
+        </a>
+        <ul class="nav-list">
+          <li>
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li>
+            <a href="#services" class="nav-link">Services</a>
+          </li>
+          <li>
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+        </ul>
+        <ul class="contact-socials">
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-pinterest"></i>
+        </ul>
+      </div>
+      <a id="contact"></a>
+      <script src="./hamburger.js"></script>
+      <script src="https://kit.fontawesome.com/fb2d751829.js" crossorigin="anonymous"></script>
+    </div>
+  </body>
 </html>
