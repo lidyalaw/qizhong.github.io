@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivation Station</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file for styling -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Motivation Station</h1>
+            <p>Your daily dose of inspiration</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div id="quoteContainer">
+                <div class="quote" id="currentQuote">
+                    <blockquote>
+                        "Success is not final, failure is not fatal: It is the courage to continue that counts."
+                    </blockquote>
+                    <p>- Winston Churchill</p>
+                </div>
+            </div>
+            <button id="randomQuoteBtn">Get Random Quote</button>
+            <form id="quoteForm">
+                <label for="quoteText">Submit Your Own Quote:</label><br>
+                <textarea id="quoteText" name="quoteText" rows="4" cols="50"></textarea><br>
+                <label for="quoteAuthor">Author:</label>
+                <input type="text" id="quoteAuthor" name="quoteAuthor"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Motivation Station. All rights reserved.</p>
+            <p>Designed by Your Name</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to external JavaScript file for interactivity -->
+</body>
+</html>
