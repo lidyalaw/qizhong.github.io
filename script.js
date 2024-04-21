@@ -30,3 +30,77 @@ function generateQuote() {
   const quoteElement = document.getElementById("quote");
   quoteElement.textContent = quotes[randomIndex];
 }
+
+// Quiz data - array of objects with questions and answers
+const quizData = [
+  {
+    question: "What is the capital of France?",
+    answers: {
+      a: "Paris",
+      b: "London",
+      c: "Berlin"
+    },
+    correctAnswer: "a"
+  },
+  {
+    question: "Who wrote 'Romeo and Juliet'?",
+    answers: {
+      a: "William Shakespeare",
+      b: "Jane Austen",
+      c: "Charles Dickens"
+    },
+    correctAnswer: "a"
+  },
+  // Add more questions as needed
+];
+
+// Function to create and display the quiz
+function displayQuiz() {
+  const quizSection = document.getElementById("quiz-section");
+
+  // Clear any existing content
+  quizSection.innerHTML = "";
+
+  // Loop through quiz data and create HTML elements for each question
+  quizData.forEach((questionObj, index) => {
+    const questionDiv = document.createElement("div");
+    questionDiv.classList.add("quiz-question");
+    questionDiv.innerHTML = `
+      <h2>Question ${index + 1}:</h2>
+      <p>${questionObj.question}</p>
+      <form id="form-${index}">
+        <input type="radio" name="question-${index}" value="a">
+        <label>${questionObj.answers.a}</label><br>
+        <input type="radio" name="question-${index}" value="b">
+        <label>${questionObj.answers.b}</label><br>
+        <input type="radio" name="question-${index}" value="c">
+        <label>${questionObj.answers.c}</label><br>
+        <button type="button" onclick="checkAnswer(${index}, '${questionObj.correctAnswer}')">Submit Answer</button>
+      </form>
+      <p id="result-${index}"></p>
+    `;
+    quizSection.appendChild(questionDiv);
+  });
+}
+
+// Function to check the answer submitted by the user
+function checkAnswer(questionIndex, correctAnswer) {
+  const form = document.getElementById(`form-${questionIndex}`);
+  const selectedAnswer = form.querySelector(`input[name="question-${questionIndex}"]:checked`);
+
+  if (selectedAnswer) {
+    const resultParagraph = document.getElementById(`result-${questionIndex}`);
+    if (selectedAnswer.value === correctAnswer) {
+      resultParagraph.textContent = "Correct!";
+      resultParagraph.style.color = "green";
+    } else {
+      resultParagraph.textContent = "Incorrect. The correct answer is " + correctAnswer.toUpperCase() + ".";
+      resultParagraph.style.color = "red";
+    }
+  } else {
+    alert("Please select an answer before submitting.");
+  }
+}
+
+// Call the function to display the quiz when the page loads
+displayQuiz();
