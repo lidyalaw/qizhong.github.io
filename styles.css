@@ -254,8 +254,8 @@ html {
 }
 
 .services-item {
-    width: 50vw;
     height: 66vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -292,12 +292,6 @@ html {
     background-position: top;
 }
 
-.orange {
-    background-image: url(./images/desktop/./image-photography.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-}
 
 /* Projects */
 
