@@ -49,13 +49,6 @@ function getQuote() {
     $('#author').html(randomQuote.author);
   });
 
-  $('html body').animate(
-    {
-      backgroundColor: currentColor,
-      color: currentColor
-    },
-    1000
-  );
   $('.button').animate(
     {
       backgroundColor: currentColor
