@@ -260,21 +260,17 @@ html {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    padding-left: 12vw;
-    padding-right: 12vw;
 }
 
 .services-item > h1 {
     font-family: 'Fraunces', serif;
     font-weight: 900;
     font-size: 22px;
-    padding-top: 35vh;
 }
 
 .services-item > p {
     font-family: 'Barlow', sans-serif;
     font-size: 14px;
-    padding-top: 2vh;
 }
 
 .cyan {
